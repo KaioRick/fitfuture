@@ -1,0 +1,59 @@
+body{
+     height: 100vh;
+  background: linear-gradient(to bottom right, #10002b, #240046, #3c096c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+.titulo {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px #000;
+}
+
+.objetivos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.card-objetivo {
+  background-color: #1a1a40;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.card-objetivo:hover {
+  background-color: #3c096c;
+  transform: scale(1.03);
+}
+
+.card-objetivo.ativo {
+  background-color: #7b2cbf;
+  box-shadow: 0 0 10px #c77dff;
+}
+.btn-login{
+    width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #9d4edd;
+  color: white;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+.btn-login:hover{
+     background-color: #7b2cbf;
+}
+/*treino pages*/

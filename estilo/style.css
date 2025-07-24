@@ -1,0 +1,118 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.login-bg {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #10002b, #240046, #3c096c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+.login-container {
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #c77dff;
+  text-shadow: 1px 1px #00f0ff;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #ff66c4;
+  margin-bottom: 30px;
+}
+
+.user-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 25px;
+  background-color: #1a1a40;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+
+form input::placeholder {
+  color: #a5a5a5;
+}
+
+.forgot {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.btn-login,
+.btn-cadastro {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #9d4edd;
+  color: white;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-login:hover,
+.btn-cadastro:hover {
+  background-color: #7b2cbf;
+}
+/* objetivos page*/
+.titulo {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px #000;
+}
+
+.objetivos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.card-objetivo {
+  background-color: #1a1a40;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.card-objetivo:hover {
+  background-color: #3c096c;
+  transform: scale(1.03);
+}
+
+.card-objetivo.ativo {
+  background-color: #7b2cbf;
+  box-shadow: 0 0 10px #c77dff;
+}

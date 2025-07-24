@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avaliação - FitFuture</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-[#05001a] to-[#120044] text-white font-sans">
+
+  <!-- Menu Lateral -->
+  <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-[#0d001f] text-white transform -translate-x-full transition-transform duration-300 z-50">
+    <div class="p-6 flex items-center gap-2">
+      <span class="text-3xl font-extrabold text-pink-500">FITFUTURE</span>
+    </div>
+    <nav class="flex flex-col space-y-4 p-4">
+      <a href="treino.html" class="hover:text-pink-400">🏋️ Treinos</a>
+      <a href="avaliacao.html" class="text-pink-400 font-bold">📊 Avaliação</a>
+      <a href="progresso.html" class="hover:text-pink-400">📈 Progresso</a>
+    </nav>
+  </div>
+
+  <!-- Botão para abrir menu -->
+  <header class="flex items-center justify-between px-6 py-4">
+    <h1 class="text-3xl font-bold text-pink-500">FITFUTURE</h1>
+    <button id="menuBtn" class="text-white text-2xl">&#9776;</button>
+  </header>
+
+  <!-- Conteúdo da Avaliação -->
+  <section class="px-6 pb-10">
+    <h2 class="text-2xl text-center font-extrabold mb-6 text-[#b968ff]">🧬 AVALIAÇÃO</h2>
+
+    <!-- IMC -->
+    <div class="bg-gradient-to-r from-purple-800 to-blue-800 p-4 rounded-xl mb-6">
+      <h3 class="text-lg font-bold flex items-center gap-2 mb-4">
+        <span>📄</span> Índice de Massa Corporal
+      </h3>
+      <div class="flex justify-between text-center mb-4">
+        <div>
+          <p>Peso (kg)</p>
+          <p class="text-2xl font-bold">56.2</p>
+        </div>
+        <div>
+          <p>Altura (m)</p>
+          <p class="text-2xl font-bold">1,60</p>
+        </div>
+        <div>
+          <p>Seu IMC</p>
+          <p class="text-2xl font-bold text-green-400">21,97</p>
+        </div>
+      </div>
+      <div class="bg-gradient-to-r from-[#a855f7] to-[#3b82f6] rounded-xl overflow-hidden">
+        <table class="w-full text-center text-sm">
+          <tr><td class="p-2 border">Muito abaixo do peso</td><td class="p-2 border">&lt; 17</td></tr>
+          <tr><td class="p-2 border">Abaixo do peso</td><td class="p-2 border">17,1 a 18,49</td></tr>
+          <tr><td class="p-2 border">Peso normal</td><td class="p-2 border">18,50 a 24,99</td></tr>
+          <tr><td class="p-2 border">Acima do peso</td><td class="p-2 border">25,1 a 29,99</td></tr>
+          <tr><td class="p-2 border">Obesidade I</td><td class="p-2 border">30,1 a 34,99</td></tr>
+          <tr><td class="p-2 border">Obesidade II (Severa)</td><td class="p-2 border">35,1 a 39,99</td></tr>
+          <tr><td class="p-2 border">Obesidade III (Mórbida)</td><td class="p-2 border">&gt; 40</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Circunferências -->
+    <div class="bg-gradient-to-r from-purple-800 to-blue-800 p-4 rounded-xl">
+      <h3 class="text-lg font-bold flex items-center gap-2 mb-4">
+        <span>🧍‍♂️</span> Circunferências
+      </h3>
+      <div class="bg-gradient-to-r from-[#a855f7] to-[#3b82f6] rounded-xl overflow-hidden">
+        <table class="w-full text-center text-sm">
+          <thead>
+            <tr class="bg-[#1e1b4b]">
+              <th class="p-2 border"> </th>
+              <th class="p-2 border">Mês Atual</th>
+              <th class="p-2 border">Mês Anterior</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="p-2 border">Tórax</td><td class="p-2 border">00,0</td><td class="p-2 border">00,0</td></tr>
+            <tr><td class="p-2 border">Braço Direito</td><td class="p-2 border">00,0</td><td class="p-2 border">00,0</td></tr>
+            <tr><td class="p-2 border">Braço Esquerdo</td><td class="p-2 border">00,0</td><td class="p-2 border">00,0</td></tr>
+            <!-- Adicione mais linhas aqui -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script do Menu -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const sidebar = document.getElementById('sidebar');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+    });
+  </script>
+</body>
+</html>

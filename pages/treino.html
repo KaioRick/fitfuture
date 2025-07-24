@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitFuture - Treinos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .menu-lateral {
+      transition: left 0.3s ease-in-out;
+    }
+    .menu-lateral.hidden {
+      left: -100%;
+    }
+    .menu-lateral.visible {
+      left: 0;
+    }
+    .overlay {
+      transition: opacity 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#05001a] to-[#120044] text-white font-sans relative overflow-x-hidden">
+
+  <!-- Botão Hamburguer -->
+  <button id="menuBtn" class="text-white text-3xl absolute top-4 left-4 z-50">&#9776;</button>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden overlay"></div>
+
+  <!-- Menu Lateral -->
+  <aside id="menuLateral" class="menu-lateral fixed top-0 left-0 w-64 h-full bg-[#1a1a40] p-6 text-white shadow-lg z-40 hidden">
+    <div class="flex justify-between items-center gap-4 px-6 py-4 border-b border-purple-800">
+  <h2 class="text-2xl font-bold text-pink-500">FITFUTURE</h2>
+ 
+</div>
+
+    <nav class="space-y-4">
+      <a href="#" class="block hover:text-purple-300 menu-item">🏋️ Treinos</a>
+      <a href="#" class="block hover:text-purple-300 menu-item">🍽️ Nutrição</a>
+      <a href="avaliacao.html" class="block hover:text-purple-300 menu-item">📊 Avaliação</a>
+      <a href="configuracao.html" class="block hover:text-purple-300 menu-item">⚙️ Configurações</a>
+      <a href="#" class="block hover:text-red-400 menu-item">🔓 Sair</a>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo principal -->
+  <main class="pt-16 px-6 transition-all duration-300 ease-in-out" id="conteudo">
+
+    <!-- Header -->
+    <header class="flex items-center justify-between mb-4">
+      <h1 class="text-3xl font-bold text-pink-500">FITFUTURE</h1>
+    </header>
+
+    <!-- Conteúdo de Treinos -->
+    <section>
+      <h2 class="text-2xl mb-4 font-bold text-purple-300">Treinos</h2>
+
+      <div class="space-y-4">
+        <div class="flex items-center justify-between bg-gradient-to-r from-purple-800 to-blue-800 rounded-xl p-4">
+          <span class="font-bold">A - INFERIORES</span>
+          <button class="text-white bg-purple-600 rounded-full px-4 py-1 hover:bg-purple-700">▶</button>
+        </div>
+
+        <div class="flex items-center justify-between bg-gradient-to-r from-purple-800 to-blue-800 rounded-xl p-4">
+          <span class="font-bold">B - INFERIORES</span>
+          <button class="text-white bg-purple-600 rounded-full px-4 py-1 hover:bg-purple-700">▶</button>
+        </div>
+
+        <div class="flex items-center justify-between bg-gradient-to-r from-purple-800 to-blue-800 rounded-xl p-4">
+          <span class="font-bold">BÍCEPS E TRÍCEPS</span>
+          <button class="text-white bg-purple-600 rounded-full px-4 py-1 hover:bg-purple-700">▶</button>
+        </div>
+
+        <div class="flex items-center justify-between bg-gradient-to-r from-purple-800 to-blue-800 rounded-xl p-4">
+          <span class="font-bold">DORSAL E OMBRO</span>
+          <button class="text-white bg-purple-600 rounded-full px-4 py-1 hover:bg-purple-700">▶</button>
+        </div>
+      </div>
+
+      <!-- Progresso -->
+      <div class="mt-6">
+        <p class="text-center mb-2">27/50 sessões</p>
+        <div class="w-full bg-gray-700 h-3 rounded-full overflow-hidden">
+          <div class="bg-blue-500 h-3 rounded-full" style="width: 54%; transition: width 1s;"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script para funcionalidade do menu -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menuLateral');
+    const overlay = document.getElementById('overlay');
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    function abrirMenu() {
+      menu.classList.remove('hidden');
+      menu.classList.add('visible');
+      overlay.classList.remove('hidden');
+    }
+
+    function fecharMenu() {
+      menu.classList.remove('visible');
+      menu.classList.add('hidden');
+      overlay.classList.add('hidden');
+    }
+
+    menuBtn.addEventListener('click', abrirMenu);
+    overlay.addEventListener('click', fecharMenu);
+
+    menuItems.forEach(item => {
+      item.addEventListener('click', fecharMenu);
+    });
+    
+  </script>
+</body>
+</html>

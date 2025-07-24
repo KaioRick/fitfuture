@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitFuture - Objetivo</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body class="login-bg">
+  <div class="container">
+    <h2 class="titulo">Qual é o seu objetivo?</h2>
+
+    <div class="objetivos">
+      <div class="card-objetivo" onclick="selecionar(this)">
+        🏃‍♀️<p>Emagrecimento</p>
+      </div>
+      <div class="card-objetivo" onclick="selecionar(this)">
+        💪<p>Ganho de Massa</p>
+      </div>
+      <div class="card-objetivo" onclick="selecionar(this)">
+        🫀<p>Resistência</p>
+      </div>
+    </div>
+
+    <button class="btn-login" onclick="proximo()">Próximo</button>
+  </div>
+
+  <script>
+    let objetivoSelecionado = null;
+
+    function selecionar(el) {
+      document.querySelectorAll('.card-objetivo').forEach(card => card.classList.remove('ativo'));
+      el.classList.add('ativo');
+      objetivoSelecionado = el.innerText.trim();
+    }
+
+    function proximo() {
+      if (!objetivoSelecionado) {
+        alert('Selecione um objetivo!');
+        return;
+      }
+
+      localStorage.setItem('objetivo', objetivoSelecionado);
+      window.location.href = 'treino.html'; // próxima tela
+    }
+  </script>
+</body>
+</html>
